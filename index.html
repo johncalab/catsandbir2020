@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<section>
+	Slide 1
+	<p class="fragment">Fade in</p>
+	<p class="fragment fade-out">Fade out</p>
+	<p class="fragment highlight-red">Highlight red</p>
+	<p class="fragment fade-in-then-out">Fade in, then out</p>
+	<p class="fragment fade-up">Slide up while fading in</p>
+</section>
+				
+<section>
+	Gabriel's theorem and Birational Geometry
+</section>
+				
+<section>
+	<p>
+		Theorem(Gabriel).
+		$X \simeq Y \iff \text{Coh}(X) \simeq \text{Coh}(Y)$
+	</p>
+	<p class="fragment">
+		Theorem. $X \sim_\text{bir} Y \iff k(X) \simeq k(Y)$
+	</p>
+	<p class="fragment">
+		SillyRemark:
+		<br>
+		$k(X) \simeq k(Y)$ $\iff$ $\text{Spec}(k(X)) \simeq \text{Spec}(k(Y))$ $\iff$ $\text{Coh}(\eta_X) \simeq \text{Coh}(\eta_Y)$
+		 <!-- $\text{Vect}(k(X)) \simeq \text{Vect}(k(Y))$  -->
+	</p>
+</section>
+
+<section>
+	<p>A few comments</p>
+	<ul>
+		<li class="fragment">Original proof works for noetherian schemes</li>
+		<li class="fragment">Rosenberg(+Gabber) extend to quasi-separated schemes <span class="fragment"> [see Brandenburg]</span></li>
+		<li class="fragment">
+			False for stacks: $\C \times \C \not\simeq B\Z/2$ <span class="fragment">[need to remember $\otimes$] </span><span class="fragment fade-in-then-out">#Tannakian</span>
+		</li>
+		<li class="fragment">What about algebraic spaces?
+			<span class="fragment">Tricky, as all proofs rely on locally ringed spaces.</span>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<ul>
+		<li class="fragment fade-up">What about algebraic spaces?</li>
+		<li class="fragment">Rosenberg(+Gabber) extend to quasi-separated schemes <span class="fragment"> [see Brandenburg]</span></li>
+		<li class="fragment">
+			False for stacks: $\C \times \C \not\simeq B\Z/2$ <span class="fragment">[need to remember $\otimes$] </span><span class="fragment fade-in-then-out">#Tannakian</span>
+		</li>
+		<li class="fragment">What about algebraic spaces?
+			<span class="fragment">Tricky, as all proofs rely on locally ringed spaces.</span>
+		</li>
+	</ul>
+</section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+			    math: {
+			      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			      config: 'TeX-AMS_HTML-full',
+			      // pass other options into `MathJax.Hub.Config()`
+			      TeX: { Macros: { 
+			      	RR: "{\\bf R}", 
+			      	O: "{\\mathcal O}",
+			      	C: "{\\mathbb C}",
+			      	Z: "{\\mathbb Z}"
+			      } }
+			    },
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
