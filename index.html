@@ -17,61 +17,93 @@
 		<div class="reveal">
 			<div class="slides">
 
-<section>
-	Slide 1
-	<p class="fragment">Fade in</p>
-	<p class="fragment fade-out">Fade out</p>
-	<p class="fragment highlight-red">Highlight red</p>
-	<p class="fragment fade-in-then-out">Fade in, then out</p>
-	<p class="fragment fade-up">Slide up while fading in</p>
-</section>
+
+
+
+
 				
 <section>
 	Gabriel's theorem and Birational Geometry
 </section>
 				
 <section>
-	<p>
-		Theorem(Gabriel).
+	$X,Y$ algebraic varieties
+	<p class='fragment' data-fragment-index=1>
+		<u>Theorem</u>(Gabriel)
 		$X \simeq Y \iff \text{Coh}(X) \simeq \text{Coh}(Y)$
 	</p>
-	<p class="fragment">
-		Theorem. $X \sim_\text{bir} Y \iff k(X) \simeq k(Y)$
+	<p class="fragment" data-fragment-index=3>
+		<u>Theorem</u>(C.-Pirisi)
+		$X \sim_c Y \iff \mathcal C^c(X) \simeq \mathcal C^c(Y)$
 	</p>
-	<p class="fragment">
-		SillyRemark:
-		<br>
-		$k(X) \simeq k(Y)$ $\iff$ $\text{Spec}(k(X)) \simeq \text{Spec}(k(Y))$ $\iff$ $\text{Coh}(\eta_X) \simeq \text{Coh}(\eta_Y)$
-		 <!-- $\text{Vect}(k(X)) \simeq \text{Vect}(k(Y))$  -->
+	<p class="fragment" data-fragment-index=4>
+		$\mathcal C^c(X) := \text{Coh}(X)/\text{Coh}_{\leq \dim X -c -1}(X)$
+	</p>	
+	<p class="fragment" data-fragment-index=2>
+		<u>Theorem</u>
+		$X \sim_\text{bir} Y \iff k(X) \simeq k(Y)$
 	</p>
 </section>
 
 <section>
-	<p>A few comments</p>
+	<p>A few comments on Gabriel's theorem</p>
 	<ul>
 		<li class="fragment">Original proof works for noetherian schemes</li>
-		<li class="fragment">Rosenberg(+Gabber) extend to quasi-separated schemes <span class="fragment"> [see Brandenburg]</span></li>
+		<li class="fragment">Rosenberg (+Gabber) extend to quasi-separated schemes$^*$
+			<span class="fragment">(see Brandenburg)</span>
+			<span class="fragment"><br>$^*$for non-noetherian $X$, use $\text{QCoh}(X)$</span>
+			<span class="fragment"><br>for noetherian $X$, $\text{QCoh}(X) = \text{IndCoh}(X)$</span>
+		</li>
 		<li class="fragment">
-			False for stacks: $\C \times \C \not\simeq B\Z/2$ <span class="fragment">[need to remember $\otimes$] </span><span class="fragment fade-in-then-out">#Tannakian</span>
+			False for stacks: $\C \times \C \not\simeq B\Z/2$ 
+			<span class="fragment"><br>(true if you remember $\otimes$)</span>
+			<span class="fragment fade-in-then-out">#Tannakian</span>
 		</li>
 		<li class="fragment">What about algebraic spaces?
-			<span class="fragment">Tricky, as all proofs rely on locally ringed spaces.</span>
+			<span class="fragment">Tricky, as proofs rely on ringed spaces.</span>
 		</li>
 	</ul>
 </section>
 
 <section>
 	<ul>
-		<li class="fragment fade-up">What about algebraic spaces?</li>
-		<li class="fragment">Rosenberg(+Gabber) extend to quasi-separated schemes <span class="fragment"> [see Brandenburg]</span></li>
-		<li class="fragment">
-			False for stacks: $\C \times \C \not\simeq B\Z/2$ <span class="fragment">[need to remember $\otimes$] </span><span class="fragment fade-in-then-out">#Tannakian</span>
+		<li class=''>Gabriel-Rosenberg: $\mathcal A$ $\mapsto$ $\text{Spec}(\mathcal A)$ <em class='fragment'>[ringed space]</em>
+			<span class='fragment'><br>$\text{Spec}(\text{Coh}(X)) = X$</span>
 		</li>
-		<li class="fragment">What about algebraic spaces?
-			<span class="fragment">Tricky, as all proofs rely on locally ringed spaces.</span>
-		</li>
+		<li class='fragment'>C.-Groechenig: $\mathcal A$ $\mapsto$ $\text{Pt}_{\mathcal A}$ <em class='fragment'>[moduli space]</em></li>
+		<li class='fragment'>Result is true for <span class='fragment'>(quasi-compact and separated)</span> algebraic spaces</li>
 	</ul>
 </section>
+
+<section>
+	What is $\text{Pt}_{\mathcal A}$?
+	<p class='fragment'>Moduli space of <em>points</em> (or <em>minimal</em> objects)</p>
+	<p class='fragment'>$E \in \mathcal{A}$ is <em>minimal</em> if it has no sub-objects</p>
+</section>
+
+<section>
+	<ul>
+		<li>$\text{Pt}_{\text{Coh}(X)} = X$<span class='fragment'>? ...not quite</span></li>
+		<li class='fragment'>$\text{Pt}_{\text{Coh}(X)} = X \times B\mathbb G_\text{m}$</li>
+		<li class='fragment'>$\text{Pt}_{\text{Coh}(X,\alpha)} = \alpha$</li>
+	</ul>
+	<p class='fragment'>
+		<u>Theorem</u>
+		$\text{Coh}(X,\alpha) \simeq \text{Coh}(Y,\beta) \iff \alpha \simeq \beta$
+	</p>
+	<p class='fragment'>
+		Conjectured by Caldararu, see previous work of Perego, Canonaco-Stellari, Antieau
+	</p>
+
+</section>
+
+
+
+
+
+
+
+
 
 
 			</div>
