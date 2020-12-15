@@ -46,16 +46,22 @@
 </section>
 
 <section>
-	<p>A few comments on Gabriel's theorem</p>
+	Comments on Gabriel
 	<ul>
-		<li class="fragment">Original proof works for noetherian schemes</li>
-		<li class="fragment">Rosenberg (+Gabber) extend to quasi-separated schemes$^*$
-			<span class="fragment">(see Brandenburg)</span>
-			<span class="fragment"><br>$^*$for non-noetherian $X$, use $\text{QCoh}(X)$</span>
-			<span class="fragment"><br>for noetherian $X$, $\text{QCoh}(X) = \text{IndCoh}(X)$</span>
+		<li class="fragment" data-fragment-index=1>Original proof works for noetherian schemes</li>
+		<li class="fragment" data-fragment-index=2>Rosenberg <span class='fragment' data-fragment-index=3>(+Gabber)</span> extend to quasi-separated schemes
+			<span class="fragment" data-fragment-index=3>(see Brandenburg)</span>
+		<li class="fragment">For non-noetherian $X$, use $\text{QCoh}(X)$
+			<p class="fragment">for noetherian $X$, $\text{QCoh}(X) = \text{IndCoh}(X)$</p>
 		</li>
+	</ul>
+</section>
+
+<section>
+	More comments
+	<ul>
 		<li class="fragment">
-			False for stacks: $\C \times \C \not\simeq B\Z/2$ 
+			False for stacks: $\text{mod}(\CC \times \CC) \simeq \text{Coh}(B\Z/2)$ 
 			<span class="fragment"><br>(true if you remember $\otimes$)</span>
 			<span class="fragment fade-in-then-out">#Tannakian</span>
 		</li>
@@ -79,6 +85,9 @@
 	What is $\text{Pt}_{\mathcal A}$?
 	<p class='fragment'>Moduli space of <em>points</em> (or <em>minimal</em> objects)</p>
 	<p class='fragment'>$E \in \mathcal{A}$ is <em>minimal</em> if it has no sub-objects</p>
+	<div class='fragment'>
+	<p style="color:yellow">(families are tricky)</p>
+	</div>
 </section>
 
 <section>
@@ -87,17 +96,159 @@
 		<li class='fragment'>$\text{Pt}_{\text{Coh}(X)} = X \times B\mathbb G_\text{m}$</li>
 		<li class='fragment'>$\text{Pt}_{\text{Coh}(X,\alpha)} = \alpha$</li>
 	</ul>
-	<p class='fragment'>
+</section>
+
+<section>
+	<p class=''>
 		<u>Theorem</u>
 		$\text{Coh}(X,\alpha) \simeq \text{Coh}(Y,\beta) \iff \alpha \simeq \beta$
 	</p>
 	<p class='fragment'>
-		Conjectured by Caldararu, see previous work of Perego, Canonaco-Stellari, Antieau
+		Conjectured by Caldararu, see also Perego, Canonaco-Stellari, Antieau
+	</p>
+</section>
+
+<section>
+	Two more things
+	<p class='fragment'>
+		Gabriel also works relatively over a base
+
+	<span class='fragment'>
+		and
+		$$ \text{Aut}(\text{Coh}(X)) = \text{Aut}(X) \ltimes \text{Pic}(X) $$
+	</span>
+
 	</p>
 
 </section>
 
 
+<section>
+	Another thing
+
+	<span class='fragment'>
+	$$
+		\begin{align*}
+			H^1(X,\O^*_X) &= \{ \mathbb G_\text{m}\text{-torsors} \} \\
+			&= \{ \text{coherent sheaves over } X, \text{ locally } \simeq \O \}
+		\end{align*}
+	$$
+	</span>
+
+	<span class='fragment'>
+	$$
+		\begin{align*}
+			H^2(X,\O^*_X) &= \{ B \mathbb G_\text{m}\text{-torsors} \} \\
+			&= \{ \text{shvs of ab cats over } X, \text{ locally } \simeq \text{Coh} \}
+		\end{align*}
+	$$
+	</span>
+
+	<span class='fragment'>
+	$$
+		\begin{align*}
+			H^3(X,\O^*_X) &= \{ BB \mathbb G_\text{m}\text{-torsors} \} \\
+			&= \text{???}
+		\end{align*}
+	$$
+	</span>
+</section>
+
+<section>
+	Quotient categories
+	<p class='fragment'>
+		<u>Definition</u>
+		<span class="fragment">$\mathcal A$ abelian, $\mathcal S \subset \mathcal A$ subcategory.</span>
+		<span class="fragment">$\mathcal S$ is <em>Serre</em> if,</span>
+		<span class="fragment">given an exact sequence $A \to B \to C$,</span> 
+		<span class='fragment'>$A,C \in \mathcal S \iff B \in \mathcal S$</span>
+	</p>
+	<ul>
+		<li class='fragment'>
+			Can form quotient $\mathcal A / \mathcal S$
+		</li>
+		<li class='fragment'>
+			Satisfies universal property
+		</li>
+		<li class='fragment'>
+			Localization: $\mathcal A / \mathcal S = 
+				\mathcal A[q^{-1} | \text{ ker } q, \text{coker } q \in \mathcal S]$
+		</li>
+	</ul>
+</section>
+
+<section>
+	<p class='fragment'>
+		$\text{Coh}_{\leq k}(X) \subset \text{Coh}(X)$ is Serre.
+	</p>
+	<p class='fragment'>
+		$\C_k(X) := \text{Coh}(X) / \text{Coh}_{\leq k-1}(X)$
+	</p>
+	<p class='fragment'>
+		$\C^c(X) := \C_{\dim X - c}(X)$
+	</p>
+</section>
+
+<section>
+	$X$ irreducible variety
+	<p class='fragment'>
+		$\C^{\dim X}(X) = \text{Coh}(X)$
+	</p>
+	<p class='fragment'>
+		$\C^{0}(X) = \text{vect}(k(X))$
+	</p>
+	<p class='fragment'>
+		Meinhardt-Partsch studied stability conditions on $D(\C^c(X))$
+	</p>
+</section>
+
+<section>
+	<p class=''>
+		<u>Facts</u>(Meinhardt-Partsch)
+		With $X$ smooth, projective, and irreducible
+	</p>
+	<ul>
+		<li class='fragment'>
+			$\C^c$ is of homological dimension $c$
+		</li>
+		<li class='fragment'>
+			$\text{Hom}_{\C^c}$ can be infinite-dimensional
+		</li>
+		<li class='fragment'>
+			There is no Serre functor on $D(\C^c(X))$, for $0 < c < \dim X$.
+		</li>
+	</ul>
+</section>
+
+<section>
+	Meinhardt-Partsch
+	<p class='fragment'>
+		<u>Theorem</u>
+		With $X$ smooth, projective, irreducible,
+		complete description of Stab and Aut for $D(\C^1(X))$
+	</p>
+	<p class='fragment'>
+		<u>Theorem</u>
+		With $X, Y$ smooth, projective, irreducible
+		$X \sim_1 Y \iff D(\C^1(X)) \simeq D(\C^1(Y))$
+	</p>
+	<p class='fragment'>
+		<u>Question</u>
+		Is
+		$X \sim_c Y \iff D(\C^c(X)) \simeq D(\C^c(Y))$?
+	</p>
+	<p class='fragment'>
+		(no for $c=\dim X$, yes for $c = 0,1$)
+</section>
+
+
+<section>
+	Meinhardt-Partsch
+	Comment on their result
+	What we show
+	A comment on proof
+	Non-commutative interlude
+</section>
 
 
 
@@ -127,7 +278,8 @@
 			      TeX: { Macros: { 
 			      	RR: "{\\bf R}", 
 			      	O: "{\\mathcal O}",
-			      	C: "{\\mathbb C}",
+			      	CC: "{\\mathbb C}",
+			      	C: "{\\mathcal C}",
 			      	Z: "{\\mathbb Z}"
 			      } }
 			    },
