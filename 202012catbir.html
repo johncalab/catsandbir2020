@@ -52,7 +52,14 @@
         <li class="fragment" data-fragment-index=2>Rosenberg <span class='fragment' data-fragment-index=3>(+Gabber)</span> extend to quasi-separated schemes
             <span class="fragment" data-fragment-index=3>(see Brandenburg)</span>
         <li class="fragment">For non-noetherian $X$, use $\text{QCoh}(X)$
-            <p class="fragment">for noetherian $X$, $\text{QCoh}(X) = \text{IndCoh}(X)$</p>
+            <p class="fragment">for noetherian $X$
+            $$
+            \begin{align*}
+                \text{QCoh}(X) &= \text{IndCoh}(X) \\
+                \text{Coh}(X) &= \text{QCoh}_\text{ft}(X)
+            \end{align*}
+            $$
+            </p>
         </li>
     </ul>
 </section>
@@ -247,23 +254,59 @@
         With $X, Y$ irreducible <b><em>schemes</em></b> over a field
         $X \sim_c Y \iff \C^c(X) \simeq \C^c(Y)$
     </p>
-
+    <p class='fragment'>
+        How to prove this?
+    </p>
 </section>
-
 
 <section>
-    Meinhardt-Partsch
-    Comment on their result
-    What we show
-    A comment on proof
-    Non-commutative interlude
+    <ul class='' style="list-style-type:none;">
+
+        <li class=''>$\mathcal A$ abelian</li>
+        <li class='fragment'>
+            $\mathcal S_0 \subset \mathcal A$, smallest Serre containing minimal objects
+        </li>
+        <li class='fragment'>$\mathcal A_1 := \mathcal A / \mathcal S_0$, and repeat</li>
+        <li class='fragment'>$ \mathcal A = \mathcal A_0 \onto \mathcal A_1 \onto \mathcal A_2 \onto \cdots \onto 0$</li>
+        <li class='fragment'>$0 \subset \mathcal S_0 \subset \mathcal S_1 \subset \mathcal S_2 \subset \cdots \subset \mathcal A$</li>
+        <li class='fragment'><br>When $\mathcal A = \text{Coh}(X)$, $\mathcal S_k = \text{Coh}_{\leq k}(X)$ </li>
+    </ul>
 </section>
 
+<section>
+    <ul class='' style="list-style-type:none;">
+        <li class='fragment'>For $x \in X$, $\dim_X x := \dim \overline{\{x\}}$</li>
+        <li class='fragment'>$X_{\geq x} := \{ x \in X | \dim_X x \geq k\}$</li>
+        <li class='fragment'>$X_{\geq x} \into X$, inherit topology and $\O_{X_{\geq k}}$
+        </li>
+        <li class='fragment'>
+            <br>
+            $$S_{\mathcal A} := \bigcup_{j \geq 0} \{ P \in \mathcal A_i | P \text{ minimal} \}$$
+        </li>
+    </ul>
+    <p class='fragment'>
+        $
+        \begin{align*}
+            X_{\geq k} &\stackrel \sim \longrightarrow S_{\mathcal C_k(X)} \\
+            x &\longmapsto \O_{\overline{\{x\}}}
+        \end{align*}
+        $
+    </p>
+</section>
 
+<section>
+    Closing questions
+    <ul>
+        <li class='fragment'>Moduli space proof?</li>
+        <li class='fragment'>$X_{\geq k}$ "lives" in localization of Sch. Can this be described as sheaves on a site?</li>
+        <li class='fragment'>Interesting non-commutative examples?</li>
+        <li class='fragment'>Relation to <a href="https://arxiv.org/abs/math/0104046" target="_blank">Smith's function field</a>?</li>
+        <li class='fragment'>Relation to <a href='https://arxiv.org/abs/1410.5207' target='_blank'>Presotto-vdB</a>?</li>
+        <li class='fragment'>What happens to $\text{Per}(Y/X)$ for flopping contraction $Y \to X$?
+    </ul>
+</section>
 
-
-
-
+<section>Thanks</section>
 
 
             </div>
@@ -289,7 +332,9 @@
                     O: "{\\mathcal O}",
                     CC: "{\\mathbb C}",
                     C: "{\\mathcal C}",
-                    Z: "{\\mathbb Z}"
+                    Z: "{\\mathbb Z}",
+                    onto: "{\\twoheadrightarrow}",
+                    into: "{\\hookrightarrow}"
                   } }
                 },
 
