@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+
+
+
+
+                
+<section>
+    Gabriel's theorem and Birational Geometry
+</section>
+                
+<section>
+    $X,Y$ algebraic varieties
+    <p class='fragment' data-fragment-index=1>
+        <u>Theorem</u>(Gabriel)
+        $X \simeq Y \iff \text{Coh}(X) \simeq \text{Coh}(Y)$
+    </p>
+    <p class="fragment" data-fragment-index=3>
+        <u>Theorem</u>(C-Pirisi)
+        $X \sim_c Y \iff \mathcal C^c(X) \simeq \mathcal C^c(Y)$
+    </p>
+    <p class="fragment" data-fragment-index=4>
+        $\mathcal C^c(X) := \text{Coh}(X)/\text{Coh}_{\leq \dim X -c -1}(X)$
+    </p>    
+    <p class="fragment" data-fragment-index=2>
+        <u>Theorem</u>
+        $X \sim_\text{bir} Y \iff k(X) \simeq k(Y)$
+    </p>
+</section>
+
+<section>
+    Comments on <a href="https://ncatlab.org/nlab/show/Gabriel-Rosenberg+theorem" target="_blank">Gabriel</a>
+    <ul>
+        <li class="fragment" data-fragment-index=1>Original proof works for noetherian schemes</li>
+        <li class="fragment" data-fragment-index=2>Rosenberg <span class='fragment' data-fragment-index=3>(+Gabber)</span> extend to quasi-separated schemes
+            <span class="fragment" data-fragment-index=3>(see Brandenburg)</span>
+        <li class="fragment">For non-noetherian $X$, use $\text{QCoh}(X)$
+            <p class="fragment">for noetherian $X$, $\text{QCoh}(X) = \text{IndCoh}(X)$</p>
+        </li>
+    </ul>
+</section>
+
+<section>
+    More comments
+    <ul>
+        <li class="fragment">
+            False for stacks: $\text{mod}(\CC \times \CC) \simeq \text{Coh}(B\Z/2)$ 
+            <span class="fragment"><br>(true if you remember $\otimes$)</span>
+            <span class="fragment fade-in-then-out">#Tannakian</span>
+        </li>
+        <li class="fragment">What about algebraic spaces?
+            <span class="fragment">Tricky, as proofs rely on ringed spaces.</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <ul>
+        <li class=''>Gabriel-Rosenberg: $\mathcal A$ $\mapsto$ $\text{Spec}(\mathcal A)$ <em class='fragment'>[ringed space]</em>
+            <span class='fragment'><br>$\text{Spec}(\text{Coh}(X)) = X$</span>
+        </li>
+        <li class='fragment'><a href="https://arxiv.org/abs/1310.6600" target="_blank">C.-Groechenig</a>: $\mathcal A$ $\mapsto$ $\text{Pt}_{\mathcal A}$ <em class='fragment'>[moduli space]</em></li>
+        <li class='fragment'>Result is true for <span class='fragment'>(quasi-compact and separated)</span> algebraic spaces</li>
+    </ul>
+</section>
+
+<section>
+    What is $\text{Pt}_{\mathcal A}$?
+    <p class='fragment'>Moduli space of <em>points</em> (or <em>minimal</em> objects)</p>
+    <p class='fragment'>$E \in \mathcal{A}$ is <em>minimal</em> if it has no sub-objects</p>
+    <div class='fragment'>
+    <p style="">(families are tricky)</p>
+    </div>
+</section>
+
+<section>
+    <ul>
+        <li>$\text{Pt}_{\text{Coh}(X)} = X$<span class='fragment'>? ...not quite</span></li>
+        <li class='fragment'>$\text{Pt}_{\text{Coh}(X)} = X \times B\mathbb G_\text{m}$</li>
+        <li class='fragment'>$\text{Pt}_{\text{Coh}(X,\alpha)} = \alpha$</li>
+    </ul>
+</section>
+
+<section>
+    <p class=''>
+        <u>Theorem</u>
+        $\text{Coh}(X,\alpha) \simeq \text{Coh}(Y,\beta) \iff \alpha \simeq \beta$
+    </p>
+    <p class='fragment'>
+        Conjectured by Caldararu, see also Perego, Canonaco-Stellari, Antieau
+    </p>
+</section>
+
+<section>
+    Two more things
+    <p class='fragment'>
+        Gabriel also works relatively over a base
+
+    <span class='fragment'>
+        and
+        $$ \text{Aut}(\text{Coh}(X)) = \text{Aut}(X) \ltimes \text{Pic}(X) $$
+    </span>
+
+    </p>
+
+</section>
+
+
+<section>
+    And a third thing
+
+    <span class='fragment'>
+    $$
+        \begin{align*}
+            H^1(X,\O^*_X) &= \{ \mathbb G_\text{m}\text{-torsors over } X \} \\
+            &= \{ \text{coherent sheaves over } X, \text{ locally } \simeq \O \}
+        \end{align*}
+    $$
+    </span>
+
+    <span class='fragment'>
+    $$
+        \begin{align*}
+            H^2(X,\O^*_X) &= \{ B \mathbb G_\text{m}\text{-torsors over } X \} \\
+            &= \{ \text{shvs of ab cats over } X, \text{ locally } \simeq \text{Coh} \}
+        \end{align*}
+    $$
+    </span>
+
+    <span class='fragment'>
+    $$
+        \begin{align*}
+            H^3(X,\O^*_X) &= \{ BB \mathbb G_\text{m}\text{-torsors over } X \} \\
+            &= \text{???}
+        \end{align*}
+    $$
+    </span>
+</section>
+
+<section>
+    Quotient categories
+    <p class='fragment'>
+        <u>Definition</u>
+        <span class="fragment">$\mathcal A$ abelian, $\mathcal S \subset \mathcal A$ subcategory.</span>
+        <span class="fragment">$\mathcal S$ is <em>Serre</em> if,</span>
+        <span class="fragment">given an exact sequence $A \to B \to C$,</span> 
+        <span class='fragment'>$A,C \in \mathcal S \iff B \in \mathcal S$</span>
+    </p>
+    <ul>
+        <li class='fragment'>
+            Can form quotient $\mathcal A / \mathcal S$
+        </li>
+        <li class='fragment'>
+            Satisfies universal property
+        </li>
+        <li class='fragment'>
+            Localization: $\mathcal A / \mathcal S = 
+                \mathcal A[q^{-1} | \text{ ker } q, \text{coker } q \in \mathcal S]$
+        </li>
+    </ul>
+</section>
+
+<section>
+    <p class='fragment'>
+        $\text{Coh}_{\leq k}(X) \subset \text{Coh}(X)$ is Serre
+    </p>
+    <p class='fragment'>
+        $\C_k(X) := \text{Coh}(X) / \text{Coh}_{\leq k-1}(X)$
+    </p>
+    <p class='fragment'>
+        $\C^c(X) := \C_{\dim X - c}(X)$
+    </p>
+</section>
+
+<section>
+    $X$ irreducible variety
+    <p class='fragment'>
+        $\C^{\dim X}(X) = \text{Coh}(X)$
+    </p>
+    <p class='fragment'>
+        $\C^{0}(X) = \text{vect}(k(X))$
+    </p>
+    <p class='fragment'>
+        <a href='https://arxiv.org/abs/0805.0492' target="_blank">Meinhardt-Partsch</a> study stability conditions on $D(\C^c(X))$
+    </p>
+</section>
+
+<section>
+    <p class=''>
+        <u>Facts</u>
+        With $X$ smooth, projective, and irreducible
+    </p>
+    <ul>
+        <li class='fragment'>
+            $\C^c$ is of homological dimension $c$
+        </li>
+        <li class='fragment'>
+            $\text{Hom}_{\C^c}$ can be infinite-dimensional
+        </li>
+        <li class='fragment'>
+            There is no Serre functor on $D(\C^c(X))$, for $0 < c < \dim X$
+        </li>
+    </ul>
+</section>
+
+<section>
+    Meinhardt-Partsch
+    <p class='fragment'>
+        <u>Theorem</u>
+        With $X$ smooth, projective, irreducible,
+        complete description of Stab and Aut for $D(\C^1(X))$
+    </p>
+    <p class='fragment'>
+        <u>Theorem</u>
+        With $X, Y$ smooth, projective, irreducible
+        $X \sim_1 Y \iff D(\C^1(X)) \simeq D(\C^1(Y))$
+    </p>
+    <p class='fragment'>
+        <u>Question</u>
+        $X \sim_c Y \stackrel ? \iff D(\C^c(X)) \simeq D(\C^c(Y))$
+    </p>
+    <p class='fragment'>
+        (no for $c=\dim X$, yes for $c = 0,1$)
+</section>
+
+<section>
+    <a href="https://arxiv.org/abs/1804.04078" target="_blank">C-Pirisi</a>
+    <p class='fragment'>
+        <u>Theorem</u>
+        With $X, Y$ irreducible <b><em>schemes</em></b> over a field
+        $X \sim_c Y \iff \C^c(X) \simeq \C^c(Y)$
+    </p>
+
+</section>
+
+
+<section>
+    Meinhardt-Partsch
+    Comment on their result
+    What we show
+    A comment on proof
+    Non-commutative interlude
+</section>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+                math: {
+                  mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                  config: 'TeX-AMS_HTML-full',
+                  // pass other options into `MathJax.Hub.Config()`
+                  TeX: { Macros: { 
+                    RR: "{\\bf R}", 
+                    O: "{\\mathcal O}",
+                    CC: "{\\mathbb C}",
+                    C: "{\\mathcal C}",
+                    Z: "{\\mathbb Z}"
+                  } }
+                },
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+            });
+        </script>
+    </body>
+</html>
